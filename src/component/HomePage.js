@@ -16,7 +16,7 @@ export default class HomePage extends Component {
     submitForm = (event) => {
         event.preventDefault();
 
-        var url = "http://localhost:8080/getDetails/?inputValue=" + this.state.name;
+        var url = "http://localhost:8080/vins/getDetails/?inputValue=" + this.state.name;
         console.log(url);
         axios
             .post(url)
@@ -26,7 +26,7 @@ export default class HomePage extends Component {
                 console.log(res.data);
                 console.log(this.state.vehicleDetails);
                 // this.setState({})
-                
+
             });
 
 
